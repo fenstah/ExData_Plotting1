@@ -22,7 +22,6 @@ if(!file.exists("truncdata.csv"))
     truncdata<-truncdata[as.Date(truncdata$Date, format="%d/%m/%Y") <= "2007-02-02" & as.Date(truncdata$Date, format="%d/%m/%Y") >= "2007-02-01",]     #subset data to only use Feb 1 and 2 2007
     write.table(truncdata, file = "truncdata.csv", row.names=FALSE, col.names=TRUE, sep=",", quote=FALSE)
 }
-##DT <- data.table("truncdata.csv")   #read as a data table
 
 
 cleanedData <- function(data=NULL) {
